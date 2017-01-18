@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TheGioiDep</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" type="text/css" href="/home/le/Desktop/the-gioi-dep/app/assets/stylesheets/scss/css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            
+            <a href="#" class="logo"><img src="/assets/logo.png"></a>
+            
+            <nav class="menu">
+                <ul>
+                    <li><a href="home.html" title="">trang chủ</a></li>
+                    <li><a href="#" title="">về thế giới đẹp</a></li>
+                    <li><a href="#" title="">sản phẩm</a></li>
+                    <li><a href="#" title="">dự án</a></li>
+                    <li><a href="#" title="">cẩm nang</a></li>
+                    <li><a href="#" title="">hướng dẫn</a></li>
+                    <li><a href="contact.html" title="">liên hệ</a></li>
+                </ul>
+            </nav>
+            <ul class="social">
+                <li>
+                    <a href="#" title=""></a>
+                </li>
+                <li>
+                    <a href="#" title=""></a>
+                </li>
+                <li>
+                    <a href="#" title=""></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+<%= yield %>
+
+</body>
+</html>

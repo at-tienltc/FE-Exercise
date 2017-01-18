@@ -1,0 +1,141 @@
+<main id="page-content">
+        <section class="banner">
+            <div class="container">
+            </div>
+        </section>
+        <section class="container">
+            <h1>sản phẩm</h1>
+            <section class="categories">
+                <div class="category-item">
+                    <a href="#"><span>xông hơi</span></a>
+                </div>
+                <div class="category-item">
+                    <a href="#"><span>thiết bị massage</span></a>
+                </div>
+                <div class="category-item">
+                    <a href="#"><span>bể bơi</span></a>
+                </div>
+                <div class="category-item">
+                    <a href="#"><span>máy nước nóng</span></a>
+                </div>
+            </section>
+            <section class="products">
+                <div class="product-item">
+                    <a href="javascript:void(0)" onclick="cart(1,'beboi',30)"><img src="/assets/sanpham1.jpg"></a>
+                    <p>Model bP-80</p>
+                    <p>1250 x 600 x 750 x 1200</p>
+                    <p>5.300.000 VND</p>
+                </div>
+                <div class="product-item">
+                    <a href="#"><img src="/assets/sanpham2.jpg"></a>
+                    <p>Model bP-80</p>
+                    <p>1250 x 600 x 750 x 1200</p>
+                    <p>5.300.000 VND</p>
+                </div>
+                <div class="product-item">
+                    <a href="#"><img src="/assets/sanpham3.jpg"></a>
+                    <p>Model bP-80</p>
+                    <p>1250 x 600 x 750 x 1200</p>
+                    <p>5.300.000 VND</p>
+                </div>
+                <div class="product-item">
+                    <a href="#"><img src="/assets/sanpham4.jpg"></a>
+                    <p>Model bP-80</p>
+                    <p>1250 x 600 x 750 x 1200</p>
+                    <p>5.300.000 VND</p>
+                </div>
+            </section>
+            <section class="products">
+                <div class="product-item">
+                    <a href="#"><img src="/assets/sanpham1.jpg"></a>
+                    <p>Model bP-80</p>
+                    <p>1250 x 600 x 750 x 1200</p>
+                    <p>5.300.000 VND</p>
+                </div>
+                <div class="product-item">
+                    <a href="#"><img src="/assets/sanpham2.jpg"></a>
+                    <p>Model bP-80</p>
+                    <p>1250 x 600 x 750 x 1200</p>
+                    <p>5.300.000 VND</p>
+                </div>
+                <div class="product-item">
+                    <a href="#"><img src="/assets/sanpham3.jpg"></a>
+                    <p>Model bP-80</p>
+                    <p>1250 x 600 x 750 x 1200</p>
+                    <p>5.300.000 VND</p>
+                </div>
+                <div class="product-item">
+                    <a href="#"><img src="/assets/sanpham4.jpg"></a>
+                    <p>Model bP-80</p>
+                    <p>1250 x 600 x 750 x 1200</p>
+                    <p>5.300.000 VND</p>
+                </div>
+            </section>
+            <section class="products">
+                <div class="product-item">
+                    <a href="#"><img src="/assets/sanpham1.jpg"></a>
+                    <p>Model bP-80</p>
+                    <p>1250 x 600 x 750 x 1200</p>
+                    <p>5.300.000 VND</p>
+                </div>
+                <div class="product-item">
+                    <a href="#"><img src="/assets/sanpham2.jpg"></a>
+                    <p>Model bP-80</p>
+                    <p>1250 x 600 x 750 x 1200</p>
+                    <p>5.300.000 VND</p>
+                </div>
+                <div class="product-item">
+                    <a href="#"><img src="/assets/sanpham3.jpg"></a>
+                    <p>Model bP-80</p>
+                    <p>1250 x 600 x 750 x 1200</p>
+                    <p>5.300.000 VND</p>
+                </div>
+                <div class="product-item">
+                    <a href="#"><img src="/assets/sanpham4.jpg"></a>
+                    <p>Model bP-80</p>
+                    <p>1250 x 600 x 750 x 1200</p>
+                    <p>5.300.000 VND</p>
+                </div>
+            </section>
+            
+        </section>
+       
+    </main>
+    <footer>
+        <div class="container">
+            <div class="content-footer1">
+                <p>2015 - Bản quyền thuộc về Thế giới đẹpJSC</p>
+            </div>
+            <div class="content-footer2">
+                <p>Thiết kế bởi Kovo.vn</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        var list_product = [];
+        var product = {id: 0, name: "", cost: 0};
+
+        var cart= function cart(id,name,product){
+            document.getElementById('cart');
+            product.id = id;
+            product.name = name;
+            product.cost = cost;
+            list_product.push(product);
+            var total = 0;
+            var result = '';
+
+            for (product of list_product){
+                for (part_product in product){
+                    total += part_product[cost];
+                    result += '<section id="cart'+ part_product[id]+'">' + 
+                        '<p id="name-product'+part_product[id]+'">Name: '+ part_product[name] +'</p>' +
+                        '<p id="cost-product'+part_product[id]+'">Cost: '+part_product[cost]+'</p>' +
+                        '<p id="total'+part_product[id]+'">Total: '+total+'</p>' +
+                        '</section>';
+                }
+            }
+
+            document.getElementById('cart').innerHTML = result;
+        }
+    </script>

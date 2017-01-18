@@ -1,0 +1,43 @@
+.clearfix {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+header {
+	&::after {
+		@extend .clearfix
+	}
+}
+
+.menu {
+	ul {
+		&::after {
+		    @extend .clearfix
+		}
+	}
+}
+
+.products {
+	&::after {
+		@extend .clearfix
+	}
+}
+
+.footer {
+	&::after {
+		@extend .clearfix
+	}
+}
+
+.contact {
+	&::after {
+		@extend .clearfix
+	}
+}
+
+.input {
+	&::after {
+		@extend .clearfix
+	}
+}
